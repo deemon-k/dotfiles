@@ -1,0 +1,74 @@
+[colors]
+background = ${xrdb:background:#ff0000}
+background2 = ${xrdb:lighterbg:#ff0000}
+selection = ${xrdb:selection:#ff0000}
+;foreground = ${xrdb:foreground:#ff0000}
+foreground = #839496
+separator = ${xrdb:separator:#ff0000}
+lightfg = ${xrdb:color7:#ff0000}
+shade2 = #434c5e
+
+[bar/example]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 100%
+height = 25
+;offset-x = 1%
+;offset-y = 1%
+radius = 0
+fixed-center = false
+enable-ipc = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #f00
+
+border-size = 1
+border-color = #00000000
+
+padding-left =  
+padding-right = 
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = JetBrainsMono:pixelsize=10;2
+font-1 = FontAwesome5Free:style=Solid:size=10;2
+font-2 = Weather Icons:size=10;2
+font-3 = FontAwesome5Free:style=Regular:size=10;2
+font-4 = FontAwesome5Brands:style=Regular:size=10;2
+font-5 = OpenSans:style:Regular:size=10;2
+
+modules-left = i3 
+modules-center = spotify 
+modules-right = updates-pacman usd-price openweathermap-forecast alsa xkeyboard wlan eth date powermenu
+
+tray-position = none 
+tray-padding = 2
+
+wm-restack = i3
+
+;override-redirect = true
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+include-file = $HOME/.config/polybar/modules
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini
